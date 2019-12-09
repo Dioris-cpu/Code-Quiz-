@@ -44,8 +44,11 @@ Javascript
 
 * Display the questions for the user
 - create variables for the questions 
--  create a function the question
-- 
+-  create a function so the question to appear 
+- create a function for when the answer is wrong 
+- create a function for when the answer is correct
+- with in the answer wrong function create a variable that subtracts time to the      timer    
+- with in the answer correct function create a variable that adds time to the timer
 
 
 
