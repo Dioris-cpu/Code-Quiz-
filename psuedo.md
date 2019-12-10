@@ -47,8 +47,15 @@ Javascript
 -  create a function so the question to appear 
 - create a function for when the answer is wrong 
 - create a function for when the answer is correct
+- create a function called progress render with a for loop
+- 
 - with in the answer wrong function create a variable that subtracts time to the      timer    
 - with in the answer correct function create a variable that adds time to the timer
+
+* Create the counter or the timer
+- create a variable for the question time and set it to 15 which equals 15 seconds per question
+- create a variable for the question count like the time running
+- create a function for the progress
 
 
 

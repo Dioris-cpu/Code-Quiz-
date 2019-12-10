@@ -10,6 +10,20 @@ var bElt = document.getElementById("B");
 var cElt = document.getElementById("C");
 var lastQuestion = questionsElt.lenght -1;
 var runningQuestionIndex = 0;
+var setTime = setInterval(timerElt, 1000);
+
+
+
+/*function runningTime (){
+    var r = seconds();
+    var t = r.toLocaleTimeStartString();
+    timerElt = t;
+
+
+}
+
+
+
 
 function questionRender(){
     var q = questionsElt[runningQuestionIndex];
@@ -22,13 +36,26 @@ function questionRender(){
 
     runningQuestionIndex+++
     questionRender();
-
-
-
-
 }
 
+function progressRender(){
+    for(var qIndex = 0; qIndex <= lastQuestionIndex; qIndex++){
+        progressRender.innerHTML += "<div class= 'prog' id="+ qIndex +"></div>";
+    }
+}
 
+function answerCorrect(){
+    document.getElementById(runningQuestionIndex).style.backgroundColor = "green"
+};
 
- 
-  
+function answerWrong(){
+    document.getElementById(runningQuestionIndex).style.backgroundColor = "red"
+}; 
+
+function counterRender(){
+    if( count <= questionTime ){
+        counterElt.innerHTML = count;
+
+    }
+} */
+   

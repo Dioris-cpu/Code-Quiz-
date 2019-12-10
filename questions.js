@@ -35,4 +35,4 @@ question[
         correct : "2",
     } 
     
-  ]; 
+  ]; console.log(question[0]);
