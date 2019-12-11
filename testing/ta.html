@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="form">
+    </div>
+    <script type="text/javascript">
+    var questions = [
+      {
+        title: "Commonly used data types DO NOT include:",
+        choices: ["strings", "booleans", "alerts", "numbers"],
+        answer: "alerts"
+      },
+      {
+        title: "The condition in an if / else statement is enclosed within ____.",
+        choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
+        answer: "parentheses"
+      },
+      ///etc.
+    ];
+    </script>
+    <script type="text/javascript">
+      var index = 0;
+      var firstQuestion = questions[index];
+      var h = $("<h>");
+      h.text(firstQuestion.title);
+      var c1 = $("<button>");
+      var c2 = $("<button>");
+      var c3 = $("<button>");
+      var c4 = $("<button>");
+      c1.text(firstQuestion.choices[0]);
+      c2.text(firstQuestion.choices[1]);
+      c3.text(firstQuestion.choices[2]);
+      c4.text(firstQuestion.choices[3]);
+      c1.on("click", function(e){
+        alert(e.target.innerText)
+      })
+      $("#form").append(h);
+      $("#form").append("<br>")
+      $("#form").append(c1);
+      $("#form").append("<br>")
+      $("#form").append(c2);
+      $("#form").append("<br>")
+      $("#form").append(c3);
+      $("#form").append("<br>")
+      $("#form").append(c4);
+      
+    </script>
+  </body>
+</html>

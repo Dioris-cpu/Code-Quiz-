@@ -1,38 +1,28 @@
-question[
+var questions = [
     {
-        question : "Whats 5 + 7 ? ",
-        choiceA : "13",
-        choiceB : "12",
-        choiceC : "18",
-        correct : "12",
+        title : "Whats the name of Ichigos Zanpakuto ? ",
+        choices : ["Zangetsu","Zabimaru","Senbonzakura"],
+        answer : "Zangetsu"
     },
     {
-        question : "Whats 4 * 6 ? ",
-        choiceA : "24",
-        choiceB : "29",
-        choiceC : "10",
-        correct : "24",
+        title : " About how long did Ichigo spend in Dangai trianing to fight Aizen ? ",
+        choices : [" 3 days ","1 year","3 months"],
+        answer : "3 months"
     },
     {
-        question : "whats 8 / 4 ? ",
-        choiceA : "3",
-        choiceB : "12",
-        choiceC : "2",
-        correct : "2",
+        title : " Where do hollows live ? ",
+        choices : [" karakura town","Hueco Mundo", "Westeros"],
+        answer : "Hueco Mundo",
     },
     {
-        question :"whats 4 - 10",
-        choiceA : "6",
-        choiceB : "-6",
-        choiceC : "-4",
-        correct : "-6",
+        title : "Which one of these the Resurrección of Ulquiorra Cifer ? ",
+        choices : ["Murciélago", "Pantera","Los Lobos" ],
+        answer : "Murciélago",
     },
     {
-        question : "whats less then 3 but greater than 1",
-        choiceA : "0",
-        choiceB : "2",
-        choiceC : "4",
-        correct : "2",
+        title : " Which one of these characters is a Quincy ? ",
+        choices : ["Renji","Grimmjow", "Ichigo"],
+        answer : "Ichigo",
     } 
     
   ]; 
