@@ -1,25 +1,58 @@
 var startElt = document.getElementById("Start");
 var timeleft = 75;
 var formElt = document.getElementById("form");
+var choicesElt = firstQuestion.choices
+var answerOne = firstQuestion.answer
+var currentQuestion;
 
-function startQuiz(){
 
-var countDownTimer = setInterval(function(){
+startElt.addEventListener("click", startQuiz);
+function startQuiz() {
+
+  var countDownTimer = setInterval(function () {
     document.getElementById("currentTime").innerHTML = timeleft + " seconds remaining";
     timeleft -= 1;
-    if(timeleft <= 0){
+    if (timeleft <= 0) {
       clearInterval(countDownTimer);
       document.getElementById("currentTime").innerHTML = "Its Over";
     }
-  }, 1000);}
+  }, 1000);
+}
 
-function answerCorrect(){
-  this.answer = timeleft + 15;
+choicesElt.addEventListener("click", $("<button>"))
+
+function answerIsCorrect() {
+  if (choicesElt === answerOne); timeleft + 15 {
+  }   else (choicesElt !== answerOne); timeleft - 15) {
+
+  }
 }
 
 
 
-  startElt.addEventListener("click", startQuiz);
+
+
+/*var currentQuestion; 
+function navigation(choices) {
+  index = index + choices;
+  if (index < 0) { 
+    index = questions.length - 1; 
+  } else if (index > questions.length - 1) { 
+    index = 0;
+  }
+  currentQuestion = questions[index];
+}
+
+formElt.addEventListener("click", function(){
+  window.length = questions[index];
+})*/
+
+
+
+
+
+
+
 
 var index = 0;
 var firstQuestion = questions[index];
@@ -31,8 +64,8 @@ var c3 = $("<button>");
 c1.text(firstQuestion.choices[0]);
 c2.text(firstQuestion.choices[1]);
 c3.text(firstQuestion.choices[2]);
-c1.on("click", function(answerCorrect){
-  (answerCorrect.target.innerText)
+c1.on("click", function () {
+
 })
 
 $("#form").append(h);
@@ -54,7 +87,7 @@ var c3 = $("<button>");
 c1.text(secondQuestion.choices[0]);
 c2.text(secondQuestion.choices[1]);
 c3.text(secondQuestion.choices[2]);
-c3.on("click", function(e){
+c3.on("click", function (e) {
   alert(e.target.innerText)
 })
 $("#form").append(h);
@@ -76,7 +109,7 @@ var c3 = $("<button>");
 c1.text(thirdQuestion.choices[0]);
 c2.text(thirdQuestion.choices[1]);
 c3.text(thirdQuestion.choices[2]);
-c2.on("click", function(answerCorrect){
+c2.on("click", function (answerCorrect) {
   (answerCorrect.target.innerText)
 })
 $("#form").append(h);
@@ -97,7 +130,7 @@ var c3 = $("<button>");
 c1.text(fourthQuestion.choices[0]);
 c2.text(fourthQuestion.choices[1]);
 c3.text(fourthQuestion.choices[2]);
-c1.on("click", function(e){
+c1.on("click", function (e) {
   alert(e.target.innerText)
 })
 $("#form").append(h);
@@ -118,7 +151,7 @@ var c3 = $("<button>");
 c1.text(fifthQuestion.choices[0]);
 c2.text(fifthQuestion.choices[1]);
 c3.text(fifthQuestion.choices[2]);
-c3.on("click", function(e){
+c3.on("click", function (e) {
   alert(e.target.innerText)
 })
 $("#form").append(h);
@@ -130,20 +163,6 @@ $("#form").append("<br>")
 $("#form").append(c3);
 $("#form").append("<br>");
 
-/*var currentQuestion; 
-function navigation(choices) {
-  index = index + choices;
-  if (index < 0) { 
-    index = questions.length - 1; 
-  } else if (index > questions.length - 1) { 
-    index = 0;
-  }
-  currentQuestion = questions[index];
-}
-
-formElt.addEventListener("click", function(){
-  window.length = questions[index];
-})*/
 
 
 
