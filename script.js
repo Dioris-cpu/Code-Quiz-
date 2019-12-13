@@ -31,21 +31,16 @@ function revealQuiz() {
   
   if(currentQuestionIndex === questions.length ) {
     var score = timeleft
-    $("#highscore").append(score);
     timeleft = 0
-    localStorage.setItem(name,score);
-    /*function allStorage() {
+    /*var localElt =document.getElementById('local');
+    var dataElt = document.getElementById('data');
+    
+    dataElt.onclick = function
+    var store = localElt.value
+    var total = dataElt.value*/
 
-      var values = [],
-          keys = Object.keys(localStorage),
-          i = keys.length;
-  
-      while ( i-- ) {
-          values.push( localStorage.getItem(name score[i]) );
-      }
-  
-      return values;
-  }*/
+    
+    
 
 
     return;
@@ -59,6 +54,9 @@ function revealQuiz() {
   var c1 = $("<button>");
   var c2 = $("<button>");
   var c3 = $("<button>");
+  $("#highscore").append(score);
+    $("#local").append(local);
+    $("#data").append(data);
   c1.text(firstQuestion.choices[0]);
   c2.text(firstQuestion.choices[1]);
   c3.text(firstQuestion.choices[2]);
