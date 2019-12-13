@@ -23,37 +23,37 @@ function startQuiz() {
   revealQuiz();
 }
 
-/*choicesElt.addEventListener("click", $("<button>"))
-
-function answerIsCorrect() {
-  if (choicesElt === answerOne); timeleft + 15; {
-  }   if (choicesElt !== answerOne); timeleft - 15; {
-
-  } 
-}
 
 
-
-
-
-/*var currentQuestion; 
-function navigation(choices) {
-  index = index + choices;
-  if (index < 0) { 
-    index = questions.length - 1; 
-  } else if (index > questions.length - 1) { 
-    index = 0;
-  }
-  currentQuestion = questions[index];
-}
-
-formElt.addEventListener("click", function(){
-  window.length = questions[index];
-})*/
-
+var currentQuestionIndex = 0;
 function revealQuiz() {
-  var index = 0;
-  var firstQuestion = questions[index];
+  $("#form").children().remove();
+  
+  if(currentQuestionIndex === questions.length ) {
+    var score = timeleft
+    $("#highscore").append(score);
+    timeleft = 0
+    localStorage.setItem(name,score);
+    /*function allStorage() {
+
+      var values = [],
+          keys = Object.keys(localStorage),
+          i = keys.length;
+  
+      while ( i-- ) {
+          values.push( localStorage.getItem(name score[i]) );
+      }
+  
+      return values;
+  }*/
+
+
+    return;
+    
+  }
+
+
+  var firstQuestion = questions[currentQuestionIndex];
   var h = $("<h>");
   h.text(firstQuestion.title);
   var c1 = $("<button>");
@@ -74,96 +74,37 @@ function revealQuiz() {
   $("#form").append("<br>")
   $("#form").append(c3);
   $("#form").append("<br>");
-
-
-  var secondQuestion = questions[1];
-  var h = $("<h>");
-  h.text(secondQuestion.title);
-  var c1 = $("<button>");
-  var c2 = $("<button>");
-  var c3 = $("<button>");
-  c1.text(secondQuestion.choices[0]);
-  c2.text(secondQuestion.choices[1]);
-  c3.text(secondQuestion.choices[2]);
-  c3.on("click", function (e) {
-    alert(e.target.innerText)
+  c1.on("click", function(event){
+    var choice = event.target.value;
+    if(firstQuestion.choices[0] === firstQuestion.answer) {
+      timeleft = timeleft+15;
+    } else {
+      timeleft = timeleft - 15;
+    }    
+    currentQuestionIndex++;
+    revealQuiz();
   })
-  $("#form").append(h);
-  $("#form").append("<br>")
-  $("#form").append(c1);
-  $("#form").append("<br>")
-  $("#form").append(c2);
-  $("#form").append("<br>")
-  $("#form").append(c3);
-  $("#form").append("<br>");
-
-
-  var thirdQuestion = questions[2];
-  var h = $("<h>");
-  h.text(thirdQuestion.title);
-  var c1 = $("<button>");
-  var c2 = $("<button>");
-  var c3 = $("<button>");
-  c1.text(thirdQuestion.choices[0]);
-  c2.text(thirdQuestion.choices[1]);
-  c3.text(thirdQuestion.choices[2]);
-  c2.on("click", function (answerCorrect) {
-    (answerCorrect.target.innerText)
+  c2.on("click", function(event){
+    var choice = event.target.value;
+    if(firstQuestion.choices[1] === firstQuestion.answer) {
+      timeleft = timeleft+15;
+    } else {
+      timeleft = timeleft - 15;
+    }
+    
+    currentQuestionIndex++;
+    revealQuiz();
   })
-  $("#form").append(h);
-  $("#form").append("<br>")
-  $("#form").append(c1);
-  $("#form").append("<br>")
-  $("#form").append(c2);
-  $("#form").append("<br>")
-  $("#form").append(c3);
-  $("#form").append("<br>");
-
-  var fourthQuestion = questions[3];
-  var h = $("<h>");
-  h.text(fourthQuestion.title);
-  var c1 = $("<button>");
-  var c2 = $("<button>");
-  var c3 = $("<button>");
-  c1.text(fourthQuestion.choices[0]);
-  c2.text(fourthQuestion.choices[1]);
-  c3.text(fourthQuestion.choices[2]);
-  c1.on("click", function (e) {
-    alert(e.target.innerText)
+  c3.on("click", function(event){
+    var choice = event.target.value;
+    if(firstQuestion.choices[2] === firstQuestion.answer) {
+      timeleft = timeleft+15;
+    } else {
+      timeleft = timeleft - 15;
+    }
+    
+    currentQuestionIndex++;
+    revealQuiz();
   })
-  $("#form").append(h);
-  $("#form").append("<br>")
-  $("#form").append(c1);
-  $("#form").append("<br>")
-  $("#form").append(c2);
-  $("#form").append("<br>")
-  $("#form").append(c3);
-  $("#form").append("<br>");
-
-  var fifthQuestion = questions[4];
-  var h = $("<h>");
-  h.text(fifthQuestion.title);
-  var c1 = $("<button>");
-  var c2 = $("<button>");
-  var c3 = $("<button>");
-  c1.text(fifthQuestion.choices[0]);
-  c2.text(fifthQuestion.choices[1]);
-  c3.text(fifthQuestion.choices[2]);
-  c3.on("click", function (e) {
-    alert(e.target.innerText)
-  })
-  $("#form").append(h);
-  $("#form").append("<br>")
-  $("#form").append(c1);
-  $("#form").append("<br>")
-  $("#form").append(c2);
-  $("#form").append("<br>")
-  $("#form").append(c3);
-  $("#form").append("<br>");
 }
-
-
-
-
-
 
